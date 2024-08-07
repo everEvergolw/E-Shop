@@ -8,7 +8,7 @@ export const Icons = {
         strokeWidth='7'
         fill='none'
         fillRule='evenodd'
-        strokeLinecap='round'
+        strokeLinecap='round' 
         strokeLinejoin='round'>
 
         <path
