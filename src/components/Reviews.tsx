@@ -40,6 +40,7 @@ function ReviewColumn({
   reviewClassName?: (reviewIndex: number) => string
   msPerPixel?: number
 }) {
+  
   const columnRef = useRef<HTMLDivElement | null>(null)
   const [columnHeight, setColumnHeight] = useState(0)
   const duration = `${columnHeight * msPerPixel}ms`
