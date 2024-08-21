@@ -33,7 +33,7 @@ const Steps = () => {
         )
         const imgPath = `/snake-${i + 1}.png`
 
-        return (
+        return ( 
           <li key={step.name} className='relative overflow-hidden lg:flex-1'>
             <div>
               <span
@@ -80,6 +80,7 @@ const Steps = () => {
               </span>
 
               {/* separator */}
+
               {i !== 0 ? (
                 <div className='absolute inset-0 hidden w-3 lg:block'>
                   <svg
@@ -95,6 +96,7 @@ const Steps = () => {
                   </svg>
                 </div>
               ) : null}
+
             </div>
           </li>
         )
