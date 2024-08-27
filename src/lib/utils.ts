@@ -39,7 +39,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@jiahaoliu', 
+      creator: '@jiahaoliu',  
     },
     icons,
     metadataBase: new URL("https://casecobra-dev-ashy.vercel.app/")

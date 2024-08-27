@@ -14,6 +14,9 @@ importers:
       '@kinde-oss/kinde-auth-nextjs':
         specifier: ^2.3.6
         version: 2.3.6(@babel/core@7.25.2)(next@14.2.5(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@kinde-oss/kinde-auth-react':
+        specifier: ^4.0.2
+        version: 4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@prisma/client':
         specifier: ^5.18.0
         version: 5.18.0(prisma@5.18.0)
@@ -915,6 +918,15 @@ packages:
       next: ^12.2.5 || ^13 || ^14
       react: ^18.1.0
       react-dom: ^18.1.0
+
+  '@kinde-oss/kinde-auth-pkce-js@3.1.0':
+    resolution: {integrity: sha512-6Q80hF2obYKsXjpD7VgqwAi9CJcurdwtw3WJtJT+Fk4f0LiCsyhOB2Dy96STGSvWPtEeQYO3sryteJG3lexM2w==}
+
+  '@kinde-oss/kinde-auth-react@4.0.2':
+    resolution: {integrity: sha512-+OlRnpdeq6H6lbm79A/vIcTzT69m1KaxkGRVqylaJn1TQD5IWWcVpJ5hTdQ0MS5jU6+Lk3y9sc8xeBRfBCfyUw==}
+    peerDependencies:
+      react: ^17.0.2 || ^18
+      react-dom: ^17.0.2 || ^18
 
   '@kinde-oss/kinde-typescript-sdk@2.9.1':
     resolution: {integrity: sha512-3BBFQ3/WgAgoWigfpK9ItUkpyleuHN14in+V44NLWi+zHwE1B8II/HR5CHhw+s6qR1wyJwQh4ddz2tUJwEXysg==}
@@ -2583,6 +2595,10 @@ packages:
 
   jwt-decode@3.1.2:
     resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
+
+  jwt-decode@4.0.0:
+    resolution: {integrity: sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==}
+    engines: {node: '>=18'}
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -4385,6 +4401,16 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
+
+  '@kinde-oss/kinde-auth-pkce-js@3.1.0':
+    dependencies:
+      jwt-decode: 4.0.0
+
+  '@kinde-oss/kinde-auth-react@4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@kinde-oss/kinde-auth-pkce-js': 3.1.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@kinde-oss/kinde-typescript-sdk@2.9.1':
     dependencies:
@@ -6199,6 +6225,8 @@ snapshots:
       object.values: 1.2.0
 
   jwt-decode@3.1.2: {}
+
+  jwt-decode@4.0.0: {}
 
   keyv@4.5.4:
     dependencies:
