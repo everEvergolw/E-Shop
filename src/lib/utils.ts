@@ -19,7 +19,7 @@ export function constructMetadata({
   title = 'CaseCobra - custom high-quality phone cases',
   description = 'Create custom high-quality phone cases in seconds',
   image = '/thumbnail.png',
-  icons = '/favicon.ico',
+  icons = '/favicon.ico', 
 }: {
   title?: string
   description?: string
@@ -39,9 +39,9 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@joshtriedcoding',
+      creator: '@jiahaoliu', 
     },
     icons,
-    metadataBase: new URL("https://casecobra.vercel.app/")
+    metadataBase: new URL("https://casecobra-dev-taupe.vercel.app/")
   }
 }
