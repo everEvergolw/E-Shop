@@ -12,7 +12,7 @@ import {
   Row,
   Section,
   Text,
-} from '@react-email/components'
+} from '@react-email/components' 
 
 const OrderReceivedEmail = ({
   shippingAddress,
@@ -26,7 +26,7 @@ const OrderReceivedEmail = ({
   const baseUrl =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://casecobra.vercel.app'
+      : 'https://casecobra-dev-taupe.vercel.app/' 
 
   return (
     <Html>
@@ -38,12 +38,12 @@ const OrderReceivedEmail = ({
             <Img
               src={`${baseUrl}/snake-3.png`}
               width='65'
-              height='73'
+              height='73' 
               alt='delivery snake'
               style={{ margin: 'auto' }}
             />
             <Heading style={global.heading}>Thank you for your order!</Heading>
-            <Text style={global.text}>
+            <Text style={global.text}> 
               We're preparing everything for delivery and will notify you once
               your package has been shipped. Delivery usually takes 2 days.
             </Text>
@@ -52,7 +52,9 @@ const OrderReceivedEmail = ({
               to contact us with your order number and we're here to help.
             </Text>
           </Section>
+
           <Hr style={global.hr} />
+
           <Section style={global.defaultPadding}>
             <Text style={adressTitle}>Shipping to: {shippingAddress.name}</Text>
             <Text style={{ ...global.text, fontSize: 14 }}>
@@ -60,7 +62,9 @@ const OrderReceivedEmail = ({
               {shippingAddress.state} {shippingAddress.postalCode}
             </Text>
           </Section>
+
           <Hr style={global.hr} />
+          
           <Section style={global.defaultPadding}>
             <Row style={{ display: 'inline-flex gap-16', marginBottom: 40 }}>
               <Column style={{ width: 170 }}>
@@ -88,11 +92,13 @@ const OrderReceivedEmail = ({
                 this email, we won't be able to see it.)
               </Text>
             </Row>
+
             <Row>
               <Text style={footer.text}>
-                © CaseCobra, Inc. All Rights Reserved.
+                © CaseCobra, Inc. All Rights Reserved. 
               </Text>
             </Row>
+
           </Section>
         </Container>
       </Body>
